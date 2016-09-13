@@ -44,10 +44,42 @@ void mousePressed()
 
  	void move()
  	{
- 			ran1 = (int)(Math.random()*5)-2;
- 			ran2 = (int)(Math.random()*5)-2;
- 			myX = myX + ran1;
- 			myY = myY + ran2;
+ 			if(moodnum == 1 || moodnum == 4)
+ 			{
+ 				if(mouseX > myX)
+ 				{
+ 					ran1 = (int)(Math.random()*5)-1;
+ 				}
+ 				else if(mouseX < myX)
+ 				{
+ 					ran1 = (int)(Math.random()*5)-3;
+ 				}
+ 				else {
+ 					ran1 = (int)(Math.random()*3)-1;
+ 				}
+
+ 				if(mouseY > myY)
+ 				{
+ 					ran2 = (int)(Math.random()*5)-1;
+ 				}
+ 				else if(mouseY < myY)
+ 				{
+ 					ran2 = (int)(Math.random()*5)-3;
+ 				}
+ 				else {
+ 					ran2 = (int)(Math.random()*3)-1;
+ 				}
+
+ 				myX = myX + ran1;
+	 			myY = myY + ran2;
+ 			}
+
+ 			else {
+ 				ran1 = (int)(Math.random()*5)-2;
+	 			ran2 = (int)(Math.random()*5)-2;
+	 			myX = myX + ran1;
+	 			myY = myY + ran2;
+ 			}
  	}
 
  	void show()
