@@ -28,6 +28,11 @@ void draw()
 void mousePressed()
 {
 	redraw();
+	colony = new Bacteria[20];
+ 	for(int i = 0; i < colony.length; i++)
+ 	 {
+ 	 	colony[i] = new Bacteria((int)(Math.random()*300)+100, (int)(Math.random()*300)+100);
+ 	 }
 }
 
  class Bacteria    
